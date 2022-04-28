@@ -60,12 +60,12 @@ class LoginViewController: UIViewController {
             if email == txtEmail.text, pass == txtPass.text {
                 // Move to home screen with tab bar
                 print("Login Successfully")
+                UserDefaults.standard.set(true, forKey: "isLogin")
                 if let vC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
                     let nav = UINavigationController(rootViewController: vC)
                     UIApplication.shared.keyWindow?.windowScene?.windows.first?.rootViewController = nav
                     return
                 }
-                
             }
         }
     }

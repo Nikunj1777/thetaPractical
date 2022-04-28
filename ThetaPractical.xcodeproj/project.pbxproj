@@ -22,6 +22,7 @@
 		38924200281AB826004FA2B3 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241FF281AB826004FA2B3 /* APIManager.swift */; };
 		38924202281AB99B004FA2B3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38924201281AB99B004FA2B3 /* UserModel.swift */; };
 		38924204281ABAC5004FA2B3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38924203281ABAC5004FA2B3 /* DataModel.swift */; };
+		38E58ACC281AC6390033402E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E58ACB281AC6390033402E /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		389241FF281AB826004FA2B3 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		38924201281AB99B004FA2B3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		38924203281ABAC5004FA2B3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		38E58ACB281AC6390033402E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		63E68E24071E77D4C7CB9854 /* Pods-ThetaPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThetaPractical.release.xcconfig"; path = "Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				389241DE281AA185004FA2B3 /* AppDelegate.swift */,
+				38E58ACB281AC6390033402E /* SplashViewController.swift */,
 				389241E2281AA185004FA2B3 /* LoginViewController.swift */,
 				389241FB281AB0DB004FA2B3 /* TabBarViewController.swift */,
 				389241F7281AAD9D004FA2B3 /* HomeViewController.swift */,
@@ -233,6 +236,7 @@
 				389241FA281AADA9004FA2B3 /* ProfileViewController.swift in Sources */,
 				389241F8281AAD9D004FA2B3 /* HomeViewController.swift in Sources */,
 				38924204281ABAC5004FA2B3 /* DataModel.swift in Sources */,
+				38E58ACC281AC6390033402E /* SplashViewController.swift in Sources */,
 				389241E9281AA185004FA2B3 /* ThetaPractical.xcdatamodeld in Sources */,
 				38924200281AB826004FA2B3 /* APIManager.swift in Sources */,
 				389241E3281AA185004FA2B3 /* LoginViewController.swift in Sources */,

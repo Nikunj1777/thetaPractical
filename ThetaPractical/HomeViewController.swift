@@ -17,6 +17,12 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            self.activityIndicator.startAnimating()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
@@ -66,17 +72,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        return 70.0
     }
 }
 
 // MARK: - Homeview call api method
 extension HomeViewController {
     func setDataIntoDataModel() {
-//        self.activityIndicator.isHidden = false
+        self.activityIndicator.isHidden = false
         DataModel.sharedInstance.deleteUserDetails()
         arrUserModel.removeAll()
-//        self.arrFriendList.removeAll()
         Common.delay(delay: 0.5) {
             self.callRandom10UserData { isSuccess in
                 if isSuccess {
@@ -85,7 +90,7 @@ extension HomeViewController {
                         DataModel.sharedInstance.setUserData(userData: user)
                     }
                     self.reloadTableviewData()
-//                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.isHidden = true
                 }
             }
         }
@@ -102,7 +107,13 @@ extension HomeViewController {
                 if data.count > 0 {
                     for user in data {
                         if let email = user["email"] as? String, let name = user["name"] as? String, let age = user["age"] as? Int {
-                            arrUserModel.append(UserModel(name: name, email: email, age: "\(age)"))
+                            if name.contains("@") {
+                                arrUserModel.append(UserModel(name: String(name.dropFirst()), email: email, age: "\(age)"))
+                            } else if email.first == "@" {
+                                arrUserModel.append(UserModel(name: name, email: String(email.dropFirst()), age: "\(age)"))
+                            } else {
+                                arrUserModel.append(UserModel(name: name, email: email, age: "\(age)"))
+                            }
                         }
                     }
                     completionHandler(true)
