@@ -8,7 +8,10 @@
 import UIKit
 
 var arrUserModel = [UserModel]()
+var fileteredModel = [UserModel]()
 class HomeViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var tblView: UITableView! {
         didSet {
@@ -23,9 +26,12 @@ class HomeViewController: UIViewController {
         }
     }
     
+    var resultSearchController: UISearchController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
+        self.setupSearchBar()
         self.setDataIntoDataModel()
         // Do any additional setup after loading the view.
     }
@@ -43,6 +49,23 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func setupSearchBar() {
+        if self.navigationItem.searchController == nil {
+            self.resultSearchController = UISearchController(searchResultsController: nil)
+            self.resultSearchController.searchResultsUpdater = self
+            self.resultSearchController.hidesNavigationBarDuringPresentation = false
+            self.resultSearchController.obscuresBackgroundDuringPresentation = false
+            self.resultSearchController.searchBar.delegate = self
+            self.definesPresentationContext = true
+            self.resultSearchController.searchBar.searchBarStyle = UISearchBar.Style.minimal
+            self.resultSearchController.searchBar.backgroundColor = UIColor.white
+            self.resultSearchController.searchBar.tintColor = .blue
+            self.navigationItem.searchController = self.resultSearchController
+        }
+        self.navigationController?.view.setNeedsLayout()
+        self.navigationController?.view.layoutIfNeeded()
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -58,16 +81,26 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrUserModel.count
+        if resultSearchController?.isActive ?? false {
+            return fileteredModel.count
+        } else {
+            return arrUserModel.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as? HomeTableViewCell else {
             return UITableViewCell()
         }
-        cell.lblName.text = "Name:- \(arrUserModel[indexPath.row].name)"
-        cell.lblAge.text = "Age:- \(arrUserModel[indexPath.row].age)"
-        cell.lblEmail.text = "Email:- \(arrUserModel[indexPath.row].email)"
+        if resultSearchController?.isActive ?? false, fileteredModel.count > indexPath.row {
+            cell.lblName.text = "Name:- \(fileteredModel[indexPath.row].name)"
+            cell.lblAge.text = "Age:- \(fileteredModel[indexPath.row].age)"
+            cell.lblEmail.text = "Email:- \(fileteredModel[indexPath.row].email)"
+        } else {
+            cell.lblName.text = "Name:- \(arrUserModel[indexPath.row].name)"
+            cell.lblAge.text = "Age:- \(arrUserModel[indexPath.row].age)"
+            cell.lblEmail.text = "Email:- \(arrUserModel[indexPath.row].email)"
+        }
         return cell
     }
     
@@ -125,5 +158,34 @@ extension HomeViewController {
             print(error.localizedDescription)
             completionHandler(false)
         }
+    }
+}
+
+// MARK: UISearchController Method
+extension HomeViewController: UISearchBarDelegate, UISearchResultsUpdating {
+
+    // MARK: Search-bar filter
+    func searchTextFor(updatedText: String, messages: [UserModel]) -> [UserModel] {
+        let allowedCharset = CharacterSet.decimalDigits
+        var resultData = [UserModel]()
+
+        if let searchText = updatedText.trimmingCharacters(in: .whitespaces) as? String {
+            let alphabetString = searchText.replacingOccurrences(of: String(updatedText.unicodeScalars.filter(allowedCharset.contains(_:))), with: "")
+            if alphabetString != "" {
+                resultData = messages.filter { $0.name.contains(searchText) }
+            }
+        } else if updatedText == "" {
+            resultData = messages
+        }
+        return resultData
+    }
+
+    func updateSearchResults(for searchController: UISearchController) {
+
+        fileteredModel.removeAll()
+
+        fileteredModel = searchTextFor(updatedText: searchController.searchBar.text ?? "", messages: arrUserModel)
+        print(fileteredModel.count)
+        self.tblView.reloadData()
     }
 }
