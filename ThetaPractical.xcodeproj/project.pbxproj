@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B7DD4A57B3C9552C3636FA /* Pods_ThetaPractical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8A4E36D89E7E0C17509D41 /* Pods_ThetaPractical.framework */; };
 		389241DF281AA185004FA2B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241DE281AA185004FA2B3 /* AppDelegate.swift */; };
 		389241E1281AA185004FA2B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241E0281AA185004FA2B3 /* SceneDelegate.swift */; };
 		389241E3281AA185004FA2B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241E2281AA185004FA2B3 /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08258DBD4B82732655DBF16D /* Pods-ThetaPractical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThetaPractical.debug.xcconfig"; path = "Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical.debug.xcconfig"; sourceTree = "<group>"; };
+		2A8A4E36D89E7E0C17509D41 /* Pods_ThetaPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThetaPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		389241DB281AA185004FA2B3 /* ThetaPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThetaPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389241DE281AA185004FA2B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		389241E0281AA185004FA2B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		389241EA281AA189004FA2B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		389241ED281AA189004FA2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		389241EF281AA189004FA2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E68E24071E77D4C7CB9854 /* Pods-ThetaPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThetaPractical.release.xcconfig"; path = "Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B7DD4A57B3C9552C3636FA /* Pods_ThetaPractical.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				389241DD281AA185004FA2B3 /* ThetaPractical */,
 				389241DC281AA185004FA2B3 /* Products */,
+				3DD8A5D93A6E99931F7F747B /* Pods */,
+				83A80288EF497534A0A307F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = ThetaPractical;
 			sourceTree = "<group>";
 		};
+		3DD8A5D93A6E99931F7F747B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08258DBD4B82732655DBF16D /* Pods-ThetaPractical.debug.xcconfig */,
+				63E68E24071E77D4C7CB9854 /* Pods-ThetaPractical.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83A80288EF497534A0A307F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A8A4E36D89E7E0C17509D41 /* Pods_ThetaPractical.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 389241F2281AA189004FA2B3 /* Build configuration list for PBXNativeTarget "ThetaPractical" */;
 			buildPhases = (
+				5242AB2CF835DB423C6EAF44 /* [CP] Check Pods Manifest.lock */,
 				389241D7281AA185004FA2B3 /* Sources */,
 				389241D8281AA185004FA2B3 /* Frameworks */,
 				389241D9281AA185004FA2B3 /* Resources */,
+				E0F96E9783ECBA402E945E0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5242AB2CF835DB423C6EAF44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThetaPractical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0F96E9783ECBA402E945E0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		389241D7281AA185004FA2B3 /* Sources */ = {
@@ -288,6 +357,7 @@
 		};
 		389241F3281AA189004FA2B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08258DBD4B82732655DBF16D /* Pods-ThetaPractical.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +385,7 @@
 		};
 		389241F4281AA189004FA2B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E68E24071E77D4C7CB9854 /* Pods-ThetaPractical.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

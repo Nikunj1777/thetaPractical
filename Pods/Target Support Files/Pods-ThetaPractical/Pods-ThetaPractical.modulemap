@@ -1,0 +1,6 @@
+framework module Pods_ThetaPractical {
+  umbrella header "Pods-ThetaPractical-umbrella.h"
+
+  export *
+  module * { export * }
+}
