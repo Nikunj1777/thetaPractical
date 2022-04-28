@@ -15,6 +15,13 @@
 		389241EB281AA189004FA2B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 389241EA281AA189004FA2B3 /* Assets.xcassets */; };
 		389241EE281AA189004FA2B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389241EC281AA189004FA2B3 /* LaunchScreen.storyboard */; };
 		389241F6281AA4C0004FA2B3 /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241F5281AA4C0004FA2B3 /* CommonFunction.swift */; };
+		389241F8281AAD9D004FA2B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241F7281AAD9D004FA2B3 /* HomeViewController.swift */; };
+		389241FA281AADA9004FA2B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241F9281AADA9004FA2B3 /* ProfileViewController.swift */; };
+		389241FC281AB0DB004FA2B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241FB281AB0DB004FA2B3 /* TabBarViewController.swift */; };
+		389241FE281AB4DF004FA2B3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241FD281AB4DF004FA2B3 /* HomeTableViewCell.swift */; };
+		38924200281AB826004FA2B3 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241FF281AB826004FA2B3 /* APIManager.swift */; };
+		38924202281AB99B004FA2B3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38924201281AB99B004FA2B3 /* UserModel.swift */; };
+		38924204281ABAC5004FA2B3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38924203281ABAC5004FA2B3 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		389241ED281AA189004FA2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		389241EF281AA189004FA2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389241F5281AA4C0004FA2B3 /* CommonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
+		389241F7281AAD9D004FA2B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		389241F9281AADA9004FA2B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		389241FB281AB0DB004FA2B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		389241FD281AB4DF004FA2B3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		389241FF281AB826004FA2B3 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		38924201281AB99B004FA2B3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		38924203281ABAC5004FA2B3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		63E68E24071E77D4C7CB9854 /* Pods-ThetaPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThetaPractical.release.xcconfig"; path = "Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +81,14 @@
 			children = (
 				389241DE281AA185004FA2B3 /* AppDelegate.swift */,
 				389241E2281AA185004FA2B3 /* LoginViewController.swift */,
+				389241FB281AB0DB004FA2B3 /* TabBarViewController.swift */,
+				389241F7281AAD9D004FA2B3 /* HomeViewController.swift */,
+				389241FD281AB4DF004FA2B3 /* HomeTableViewCell.swift */,
+				389241F9281AADA9004FA2B3 /* ProfileViewController.swift */,
 				389241F5281AA4C0004FA2B3 /* CommonFunction.swift */,
+				389241FF281AB826004FA2B3 /* APIManager.swift */,
+				38924201281AB99B004FA2B3 /* UserModel.swift */,
+				38924203281ABAC5004FA2B3 /* DataModel.swift */,
 				389241E4281AA185004FA2B3 /* Main.storyboard */,
 				389241EA281AA189004FA2B3 /* Assets.xcassets */,
 				389241EC281AA189004FA2B3 /* LaunchScreen.storyboard */,
@@ -209,9 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389241FA281AADA9004FA2B3 /* ProfileViewController.swift in Sources */,
+				389241F8281AAD9D004FA2B3 /* HomeViewController.swift in Sources */,
+				38924204281ABAC5004FA2B3 /* DataModel.swift in Sources */,
 				389241E9281AA185004FA2B3 /* ThetaPractical.xcdatamodeld in Sources */,
+				38924200281AB826004FA2B3 /* APIManager.swift in Sources */,
 				389241E3281AA185004FA2B3 /* LoginViewController.swift in Sources */,
+				389241FC281AB0DB004FA2B3 /* TabBarViewController.swift in Sources */,
 				389241F6281AA4C0004FA2B3 /* CommonFunction.swift in Sources */,
+				389241FE281AB4DF004FA2B3 /* HomeTableViewCell.swift in Sources */,
+				38924202281AB99B004FA2B3 /* UserModel.swift in Sources */,
 				389241DF281AA185004FA2B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

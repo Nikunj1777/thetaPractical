@@ -46,8 +46,6 @@ class LoginViewController: UIViewController {
     // MARK: - Viewlifecycle method
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = UserDefaults.standard.value(forKey: "logindata") as? [String: Any], let email = user["email"] as? String, let pass = user["pass"] as? String {
-        }
     }
     
     // MARK: - IBAction method
@@ -58,7 +56,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapBtnLogin(_ sender: UIButton) {
-        
+        if let user = UserDefaults.standard.value(forKey: "logindata") as? [String: Any], let email = user["email"] as? String, let pass = user["pass"] as? String {
+            if email == txtEmail.text, pass == txtPass.text {
+                // Move to home screen with tab bar
+                print("Login Successfully")
+                if let vC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
+                    let nav = UINavigationController(rootViewController: vC)
+                    UIApplication.shared.keyWindow?.windowScene?.windows.first?.rootViewController = nav
+                    return
+                }
+                
+            }
+        }
     }
 }
 
