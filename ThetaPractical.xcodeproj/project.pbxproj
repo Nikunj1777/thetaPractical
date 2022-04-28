@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		36B7DD4A57B3C9552C3636FA /* Pods_ThetaPractical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8A4E36D89E7E0C17509D41 /* Pods_ThetaPractical.framework */; };
 		389241DF281AA185004FA2B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241DE281AA185004FA2B3 /* AppDelegate.swift */; };
-		389241E3281AA185004FA2B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241E2281AA185004FA2B3 /* ViewController.swift */; };
+		389241E3281AA185004FA2B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241E2281AA185004FA2B3 /* LoginViewController.swift */; };
 		389241E6281AA185004FA2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389241E4281AA185004FA2B3 /* Main.storyboard */; };
 		389241E9281AA185004FA2B3 /* ThetaPractical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 389241E7281AA185004FA2B3 /* ThetaPractical.xcdatamodeld */; };
 		389241EB281AA189004FA2B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 389241EA281AA189004FA2B3 /* Assets.xcassets */; };
 		389241EE281AA189004FA2B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389241EC281AA189004FA2B3 /* LaunchScreen.storyboard */; };
+		389241F6281AA4C0004FA2B3 /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389241F5281AA4C0004FA2B3 /* CommonFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +22,13 @@
 		2A8A4E36D89E7E0C17509D41 /* Pods_ThetaPractical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThetaPractical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		389241DB281AA185004FA2B3 /* ThetaPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThetaPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389241DE281AA185004FA2B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		389241E2281AA185004FA2B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		389241E2281AA185004FA2B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		389241E5281AA185004FA2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		389241E8281AA185004FA2B3 /* ThetaPractical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThetaPractical.xcdatamodel; sourceTree = "<group>"; };
 		389241EA281AA189004FA2B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		389241ED281AA189004FA2B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		389241EF281AA189004FA2B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		389241F5281AA4C0004FA2B3 /* CommonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
 		63E68E24071E77D4C7CB9854 /* Pods-ThetaPractical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThetaPractical.release.xcconfig"; path = "Target Support Files/Pods-ThetaPractical/Pods-ThetaPractical.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				389241DE281AA185004FA2B3 /* AppDelegate.swift */,
-				389241E2281AA185004FA2B3 /* ViewController.swift */,
+				389241E2281AA185004FA2B3 /* LoginViewController.swift */,
+				389241F5281AA4C0004FA2B3 /* CommonFunction.swift */,
 				389241E4281AA185004FA2B3 /* Main.storyboard */,
 				389241EA281AA189004FA2B3 /* Assets.xcassets */,
 				389241EC281AA189004FA2B3 /* LaunchScreen.storyboard */,
@@ -207,7 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				389241E9281AA185004FA2B3 /* ThetaPractical.xcdatamodeld in Sources */,
-				389241E3281AA185004FA2B3 /* ViewController.swift in Sources */,
+				389241E3281AA185004FA2B3 /* LoginViewController.swift in Sources */,
+				389241F6281AA4C0004FA2B3 /* CommonFunction.swift in Sources */,
 				389241DF281AA185004FA2B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
