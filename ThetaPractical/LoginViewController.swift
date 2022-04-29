@@ -66,6 +66,8 @@ class LoginViewController: UIViewController {
                     UIApplication.shared.keyWindow?.windowScene?.windows.first?.rootViewController = nav
                     return
                 }
+            } else {
+                Common.showAlert(title: "Oops", message: "Invalid email and password.")
             }
         }
     }
